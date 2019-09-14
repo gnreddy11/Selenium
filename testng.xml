@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Build1.2">
+  <test thread-count="5" name="Build1.2_TestResults">
+    <classes>
+      <class name="com.TestNG.FB_login"/>
+      <class name="com.TestNG.TestNgAnnotations"/>
+      <class name="com.TestNG.Sample3"/>
+      <class name="com.TestNG.Sample2"/>
+      <class name="com.TestNG.Sample1"/>
+    </classes>
+  </test> <!-- Build1.2TestResults -->
+</suite> <!-- Build1.2 -->
