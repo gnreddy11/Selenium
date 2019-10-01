@@ -29,7 +29,7 @@ import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 
-public class FB_Login extends StaticVaraibles {
+public class ShearCircle_CustRegistration extends StaticVaraibles {
 	// WebDriver driver;
 
 	// create reference of CommonFunctions class to re-use of functions
@@ -47,9 +47,8 @@ public class FB_Login extends StaticVaraibles {
 		Properties p = new Properties();
 		p.load(fi);
 		driver.get(p.getProperty("URL"));
-		cfn.sendKeysByanyLocater(obj.Email_EditBox, p.getProperty("Email"));
-		cfn.sendKeysByanyLocater(obj.Password_EditBox, p.getProperty("password"));
-		cfn.clickByanyLocater(obj.Login_Button);
+		
+		
 
 	}
 

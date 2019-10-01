@@ -35,6 +35,7 @@ public class CommonFunctions extends StaticVaraibles {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		driver.manage().window().maximize();
 
 	}
 
@@ -91,117 +92,9 @@ public class CommonFunctions extends StaticVaraibles {
 
 	}
 
-	/******* SendKeys ****************************/
-	public void sendkeysByID(String locater, String inputData) {
+	public void clickByanyLocater(final By locater) {
 		try {
-			WebElement ele = driver.findElement(By.id(locater));
-			if (ele.isDisplayed()) {
-				if (ele.isEnabled()) {
-					ele.sendKeys(inputData);
-
-				} else {
-					System.out.println("Element is not Enabled state, please check*************");
-				}
-
-			} else {
-				System.out.println("Element is not Displayed, please check*************");
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public void sendkeysByNAME(String locater, String inputData) {
-		try {
-			WebElement ele = driver.findElement(By.name(locater));
-			if (ele.isDisplayed()) {
-				if (ele.isEnabled()) {
-					ele.sendKeys(inputData);
-
-				} else {
-					System.out.println("Element is not Enabled state, please check*************");
-				}
-
-			} else {
-				System.out.println("Element is not Displayed, please check*************");
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public void sendkeysByXpath(String locater, String inputData) {
-		try {
-			WebElement ele = driver.findElement(By.xpath(locater));
-			if (ele.isDisplayed()) {
-				if (ele.isEnabled()) {
-					ele.sendKeys(inputData);
-
-				} else {
-					System.out.println("Element is not Enabled state, please check*************");
-				}
-
-			} else {
-				System.out.println("Element is not Displayed, please check*************");
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	/****************** click on webelement **********************/
-
-	public void clickByID(String locater) {
-		try {
-			WebElement ele = driver.findElement(By.id(locater));
-			if (ele.isDisplayed()) {
-				if (ele.isEnabled()) {
-					ele.click();
-
-				} else {
-					System.out.println("Element is not Enabled state, please check*************");
-				}
-
-			} else {
-				System.out.println("Element is not Displayed, please check*************");
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public void clickByName(String locater) {
-		try {
-			WebElement ele = driver.findElement(By.name(locater));
-			if (ele.isDisplayed()) {
-				if (ele.isEnabled()) {
-					ele.click();
-
-				} else {
-					System.out.println("Element is not Enabled state, please check*************");
-				}
-
-			} else {
-				System.out.println("Element is not Displayed, please check*************");
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	public void clickByXpath(String locater) {
-		try {
-			WebElement ele = driver.findElement(By.xpath(locater));
+			WebElement ele = driver.findElement(locater);
 			if (ele.isDisplayed()) {
 				if (ele.isEnabled()) {
 					ele.click();
@@ -246,19 +139,21 @@ public class CommonFunctions extends StaticVaraibles {
 		DateFormat df = new SimpleDateFormat("yyyy_MMM_dd_HH_mm_ss a");
 		String timestamp = df.format(d);
 		System.out.println(timestamp);
-		
+
 		if (res.getStatus() == ITestResult.FAILURE) {
 			File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileHandler.copy(f, new File("./screenshots/" +"Fail_"+className  + "_" +methodName+"_"+ timestamp + ".PNG"));
+			FileHandler.copy(f,
+					new File("./screenshots/" + "Fail_" + className + "_" + methodName + "_" + timestamp + ".PNG"));
 
 		}
 		if (res.getStatus() != ITestResult.FAILURE) {
 			File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileHandler.copy(f, new File("./screenshots/" +"Pass_"+className  + "_" +methodName+"_"+ timestamp + ".PNG"));
+			FileHandler.copy(f,
+					new File("./screenshots/" + "Pass_" + className + "_" + methodName + "_" + timestamp + ".PNG"));
 
 		}
 		Thread.sleep(3000);
-		
+
 	}
 
 }
