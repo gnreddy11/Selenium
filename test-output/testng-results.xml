@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="189" started-at="2019-09-23T21:38:17 EDT" finished-at="2019-09-23T21:38:17 EDT">
+  <suite name="Default suite" duration-ms="8223" started-at="2019-10-24T21:55:24 EDT" finished-at="2019-10-24T21:55:32 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="189" started-at="2019-09-23T21:38:17 EDT" finished-at="2019-09-23T21:38:17 EDT">
-      <class name="com.TestScenarios.CreateExcel">
-        <test-method status="PASS" signature="createexcelshhet()[pri:0, instance:com.TestScenarios.CreateExcel@65e2dbf3]" name="createexcelshhet" duration-ms="148" started-at="2019-09-23T21:38:17 EDT" finished-at="2019-09-23T21:38:17 EDT">
+    <test name="Default test" duration-ms="8223" started-at="2019-10-24T21:55:24 EDT" finished-at="2019-10-24T21:55:32 EDT">
+      <class name="com.TestScenarios.FramesSample">
+        <test-method status="PASS" signature="f()[pri:0, instance:com.TestScenarios.FramesSample@7791a895]" name="f" duration-ms="8176" started-at="2019-10-24T21:55:24 EDT" finished-at="2019-10-24T21:55:32 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createexcelshhet -->
-      </class> <!-- com.TestScenarios.CreateExcel -->
+        </test-method> <!-- f -->
+      </class> <!-- com.TestScenarios.FramesSample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,6 +7,10 @@ public class StaticVaraibles {
 	public static WebDriver driver;
 	public static String className ="";
 	public static String methodName ="";
+	public static String ProjectDir = "";
+	public static  String ScreenshotsPath = "" ; 
+	
+	
 	
 	
 

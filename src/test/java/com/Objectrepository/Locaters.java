@@ -8,7 +8,9 @@ public class Locaters {
 	public static final By Password_EditBox = By.id("pass");
 	public static final By Login_Button = By.id("loginbutton");
 	
-	//ShearCircle locaters
+	//Frames locaters
+	public static final By lbmp_Zonal_Link = By.name("P-24Alist");
 	
+	//public static final By lbmp_Zonal_Link = By.name("P-8list");
 
 }

@@ -50,6 +50,7 @@ public class FB_Login extends StaticVaraibles {
 		cfn.sendKeysByanyLocater(obj.Email_EditBox, p.getProperty("Email"));
 		cfn.sendKeysByanyLocater(obj.Password_EditBox, p.getProperty("password"));
 		cfn.clickByanyLocater(obj.Login_Button);
+		
 
 	}
 
